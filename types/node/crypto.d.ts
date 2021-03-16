@@ -234,7 +234,7 @@ declare module 'crypto' {
         private constructor();
         update(data: BinaryLike): Buffer;
         update(data: string, input_encoding: Encoding): Buffer;
-        update(data: NodeJS.ArrayBufferView, input_encoding: undefined, output_encoding: BinaryToTextEncoding): string;
+        update(data: NodeJS.ArrayBufferView, input_encoding: BinaryToTextEncoding | undefined, output_encoding: BinaryToTextEncoding): string;
         update(data: string, input_encoding: Encoding | undefined, output_encoding: BinaryToTextEncoding): string;
         final(): Buffer;
         final(output_encoding: BufferEncoding): string;
@@ -280,7 +280,7 @@ declare module 'crypto' {
         private constructor();
         update(data: NodeJS.ArrayBufferView): Buffer;
         update(data: string, input_encoding: BinaryToTextEncoding): Buffer;
-        update(data: NodeJS.ArrayBufferView, input_encoding: undefined, output_encoding: Encoding): string;
+        update(data: NodeJS.ArrayBufferView, input_encoding: BinaryToTextEncoding | undefined, output_encoding: Encoding): string;
         update(data: string, input_encoding: BinaryToTextEncoding | undefined, output_encoding: Encoding): string;
         final(): Buffer;
         final(output_encoding: BufferEncoding): string;
